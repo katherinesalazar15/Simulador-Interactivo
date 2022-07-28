@@ -1,29 +1,30 @@
 
+//OBTENER ELEMENTO SEGUN ID
 
-function agregarAlCarrito(productos) {
+let a = document.getElementById("titulo");
+let div = document.getElementById("container");
 
-  
+console.log(a.innerText);
+console.log(div.innerText);
 
-  let productosAgregados = "";
+//cambio el contenido del elemento
 
-    
-    for(let posicion = 0; posicion < 3; posicion++){
+titulo.innerText = "Este es mi proyecto"
+console.log(a.innerText)
 
-      productosAgregados += posicion;
+//GENERAR NUEVO NODO CON CONTENIDO DENTRO DEL ELEMENTO SELECCIONADO 
+div.innerHTML = "<h2>Hola Juan!</h2><p>Aprobame :)</p>"
 
-        console.log("Agregar el producto al carrito: " + productos);
+//LISTA DE PRODUCTOS EN EL CARRITO Y AGREGA PRODUCTO MEDIANTE PROMPT
+let agregar = prompt("ingrese el producto que desea agregar")
+console.log(agregar)
+let p = document.getElementById("parrafo");
+let producto = document.getElementById("card");
+let listas = ["Pollera Sofia", "Remera Umma", "Pantalón Berlin", "Short Melina"];
 
-    }
-   
-    
+for (const lista of listas) {
+  let li = document.createElement("li");
+    li.innerHTML = lista
+    producto.appendChild(li);
+    parrafo.innerText = agregar
 }
-
-agregarAlCarrito('Pollera Sofia');
-agregarAlCarrito('Remera Umma');  
-agregarAlCarrito('Pantalón Berlin');
-
-
-
-
-
-
